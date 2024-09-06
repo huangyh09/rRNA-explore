@@ -1,0 +1,10 @@
+1   Huang gene    228610266        228610386        .       -       .       gene_id "RNA5SN1";
+1   Huang transcript    228610266        228610386        .       -       .       gene_id "RNA5SN1"; transcript_id "RNA5SN1";
+1   Huang exon    228610266        228610386        .       -       .       gene_id "RNA5SN1"; transcript_id "RNA5SN1";
+21   Huang gene    8433222        8446572        .       +       .       gene_id "RNA45SN1";
+21   Huang transcript    8436876        8438744        .       +       .       gene_id "RNA45SN1"; transcript_id "RNA18SN1";
+21   Huang exon    8436876        8438744        .       +       .       gene_id "RNA45SN1"; transcript_id "RNA18SN1";
+21   Huang transcript    8439822        8439978        .       +       .       gene_id "RNA45SN1"; transcript_id "RNA5-8SN1";
+21   Huang exon    8439822        8439978        .       +       .       gene_id "RNA45SN1"; transcript_id "RNA5-8SN1";
+21   Huang transcript    8441146        8446211        .       +       .       gene_id "RNA45SN1"; transcript_id "RNA28SN1";
+21   Huang exon    8441146        8446211        .       +       .       gene_id "RNA45SN1"; transcript_id "RNA28SN1";

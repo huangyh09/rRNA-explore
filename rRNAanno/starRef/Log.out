@@ -1,0 +1,75 @@
+STAR version=2.7.11b
+STAR compilation time,server,dir=2024-01-25T16:12:02-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+STAR git: On branch master ; commit a72e5fa27331108f524211d667949dc5ff4072e8 ; diff files: CHANGES.md README.md doc/STARmanual.pdf extras/doc-latex/STARmanual.tex extras/doc-latex/parametersDefault.tex extras/docker/Dockerfile source/VERSION 
+##### Command Line:
+STAR --runThreadN 3 --runMode genomeGenerate --genomeDir starRef --genomeFastaFiles rRNA_5S_45S.fa --sjdbGTFfile rRNA_anno_5S_45S.gtf --sjdbOverhang 100 --genomeSAindexNbases 5
+##### Initial USER parameters from Command Line:
+###### All USER parameters from Command Line:
+runThreadN                    3     ~RE-DEFINED
+runMode                       genomeGenerate        ~RE-DEFINED
+genomeDir                     starRef     ~RE-DEFINED
+genomeFastaFiles              rRNA_5S_45S.fa        ~RE-DEFINED
+sjdbGTFfile                   rRNA_anno_5S_45S.gtf     ~RE-DEFINED
+sjdbOverhang                  100     ~RE-DEFINED
+genomeSAindexNbases           5     ~RE-DEFINED
+##### Finished reading parameters from all sources
+
+##### Final user re-defined parameters-----------------:
+runMode                           genomeGenerate   
+runThreadN                        3
+genomeDir                         starRef
+genomeFastaFiles                  rRNA_5S_45S.fa   
+genomeSAindexNbases               5
+sjdbGTFfile                       rRNA_anno_5S_45S.gtf
+sjdbOverhang                      100
+
+-------------------------------
+##### Final effective command line:
+STAR   --runMode genomeGenerate      --runThreadN 3   --genomeDir starRef   --genomeFastaFiles rRNA_5S_45S.fa      --genomeSAindexNbases 5   --sjdbGTFfile rRNA_anno_5S_45S.gtf   --sjdbOverhang 100
+----------------------------------------
+
+Number of fastq files for each mate = 1
+ParametersSolo: --soloCellFilterType CellRanger2.2 filtering parameters:  3000 0.99 10
+Finished loading and checking parameters
+--genomeDir directory created: starRef/
+Sep 06 13:00:58 ... starting to generate Genome files
+rRNA_5S_45S.fa : chr # 0  "1-" chrStart: 0
+rRNA_5S_45S.fa : chr # 1  "21+" chrStart: 262144
+Chromosome sequence lengths: 
+1-	740
+21+	13351
+Genome sequence total length = 14091
+Genome size with padding = 524288
+Sep 06 13:00:58 ..... processing annotations GTF
+Processing pGe.sjdbGTFfile=rRNA_anno_5S_45S.gtf, found:
+		4 transcripts
+		4 exons (non-collapsed)
+		0 collapsed junctions
+Total junctions: 0
+Sep 06 13:00:58 ..... finished GTF processing
+
+Estimated genome size with padding and SJs: total=genome+SJ=201524288 = 524288 + 201000000
+GstrandBit=32
+Number of SA indices: 28182
+Sep 06 13:00:58 ... starting to sort Suffix Array. This may take a long time...
+Number of chunks: 2;   chunks size limit: 112728 bytes
+Sep 06 13:00:58 ... sorting Suffix Array chunks and saving them to disk...
+Writing 112728 bytes into starRef//SA_0 ; empty space on disk = 1443924803584 bytes ...Writing 112728 bytes into starRef//SA_1 ; empty space on disk = 1443924709376 bytes ... done
+ done
+Sep 06 13:00:58 ... loading chunks from disk, packing SA...
+Sep 06 13:00:58 ... finished generating suffix array
+Sep 06 13:00:58 ... generating Suffix Array index
+Sep 06 13:00:58 ... completed Suffix Array index
+Sep 06 13:00:58   Finished preparing junctions
+Sep 06 13:00:58 ..... finished inserting junctions into genome
+Sep 06 13:00:58 ... writing Genome to disk ...
+Writing 524288 bytes into starRef//Genome ; empty space on disk = 1443924795392 bytes ... done
+SA size in bytes: 116254
+Sep 06 13:00:58 ... writing Suffix Array to disk ...
+Writing 116254 bytes into starRef//SA ; empty space on disk = 1443924271104 bytes ... done
+Sep 06 13:00:58 ... writing SAindex to disk
+Writing 8 bytes into starRef//SAindex ; empty space on disk = 1443924152320 bytes ... done
+Writing 48 bytes into starRef//SAindex ; empty space on disk = 1443924152320 bytes ... done
+Writing 5971 bytes into starRef//SAindex ; empty space on disk = 1443924152320 bytes ... done
+Sep 06 13:00:58 ..... finished successfully
+DONE: Genome generation, EXITING

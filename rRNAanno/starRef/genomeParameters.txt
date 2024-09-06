@@ -1,0 +1,19 @@
+### STAR   --runMode genomeGenerate      --runThreadN 3   --genomeDir starRef   --genomeFastaFiles rRNA_5S_45S.fa      --genomeSAindexNbases 5   --sjdbGTFfile rRNA_anno_5S_45S.gtf   --sjdbOverhang 100
+### GstrandBit 32
+versionGenome	2.7.4a
+genomeType	Full
+genomeFastaFiles	rRNA_5S_45S.fa 
+genomeSAindexNbases	5
+genomeChrBinNbits	18
+genomeSAsparseD	1
+genomeTransformType	None
+genomeTransformVCF	-
+sjdbOverhang	100
+sjdbFileChrStartEnd	- 
+sjdbGTFfile	rRNA_anno_5S_45S.gtf
+sjdbGTFchrPrefix	-
+sjdbGTFfeatureExon	exon
+sjdbGTFtagExonParentTranscript	transcript_id
+sjdbGTFtagExonParentGene	gene_id
+sjdbInsertSave	Basic
+genomeFileSizes	524288 116254
