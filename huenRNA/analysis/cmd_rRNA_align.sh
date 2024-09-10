@@ -10,7 +10,7 @@
 ## align reads to rRNA sequences
 STARbin=/ssd/users/yuanhua/envs/TFProb/bin/STAR
 starRef=/ssd/users/yuanhua/huenRNA/rRNAanno/starRef
-DATA_DIR=/ssd/users/yuanhua/huenRNA
+DATA_DIR=/data/users/yuanhua/huenRNA
 
 mkdir $DATA_DIR/rRNAbam
 
@@ -24,15 +24,11 @@ do
     mkdir $DATA_DIR/rRNAbam/$samp
     cd $DATA_DIR/rRNAbam/$samp
     
-    #Alignment (#SortedByCoordinate)
-    fastqDIR=$DATA_DIR/01.RawData/$samp
+    #Alignment (default: keep mate pair)
+    fastqDIR=$DATA_DIR/original/01.RawData/$samp
     $STARbin --runThreadN 30 --genomeDir $starRef \
         --readFilesIn $fastqDIR/"$samp"_1.fq.gz $fastqDIR/"$samp"_2.fq.gz \
         --readFilesCommand zcat --outSAMtype BAM Unsorted --quantMode GeneCounts \
         --outFilterScoreMinOverLread 0.33 --outFilterMatchNminOverLread 0.33 \
         --outReadsUnmapped Fastx
-    
-    # #Sort
-    # samtools sort -@ 10 Aligned.out.bam -o Aligned.sortedByCoord.out.bam
-    # samtools index Aligned.sortedByCoord.out.bam
 done
